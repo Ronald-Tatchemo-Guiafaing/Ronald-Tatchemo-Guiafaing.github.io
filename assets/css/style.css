@@ -275,6 +275,43 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   line-height: 1.65;
 }
 
+.focus-heading {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  font-weight: 700;
+  margin: 1.35rem 0 0.65rem;
+}
+
+.focus-list {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.focus-list li {
+  position: relative;
+  padding: 0.35rem 0 0.35rem 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--line);
+}
+
+.focus-list li:last-child { border-bottom: none; }
+
+.focus-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .info-list {
   background: var(--surface);
   border: 1px solid var(--line);
