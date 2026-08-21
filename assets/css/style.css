@@ -151,11 +151,11 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .hero-title {
   font-family: var(--display);
-  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 1.35rem;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
   color: var(--ink);
   text-transform: none;
 }
