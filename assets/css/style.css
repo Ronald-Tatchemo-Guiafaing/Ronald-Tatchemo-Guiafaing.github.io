@@ -529,35 +529,31 @@ body:has(#panel-home.active) .bg-shape {
 
 .contact-panel {
   position: relative;
+  isolation: isolate;
 }
 
-.contact-panel .page-head {
-  position: relative;
-  z-index: 1;
-  padding-left: 7.5rem;
-}
-
-.contact-accent {
+.contact-panel::before {
+  content: "";
   position: absolute;
-  top: 2.25rem;
-  left: 2.5rem;
-  width: 118px;
-  height: 118px;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(247, 249, 251, 0.92) 0%,
+      rgba(247, 249, 251, 0.72) 38%,
+      rgba(238, 245, 248, 0.55) 62%,
+      rgba(247, 249, 251, 0.88) 100%
+    ),
+    url("../img/contact-bg-robot.jpg?v=1") right 8% top 12% / min(58vw, 720px) auto no-repeat;
+  opacity: 1;
 }
 
-.contact-accent img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.95);
-  box-shadow:
-    0 12px 28px rgba(28, 36, 48, 0.12),
-    0 0 0 8px rgba(74, 155, 184, 0.12);
-  opacity: 0.92;
-  display: block;
+.contact-panel .page-head,
+.contact-panel .contact-cards {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-cards .card {
@@ -592,12 +588,15 @@ body:has(#panel-home.active) .bg-shape {
     width: 88px;
     height: 88px;
   }
-  .contact-panel .page-head { padding-left: 0; padding-top: 7rem; }
-  .contact-accent {
-    top: 1.5rem;
-    left: 1.5rem;
-    width: 96px;
-    height: 96px;
+  .contact-panel::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(247, 249, 251, 0.88) 0%,
+        rgba(247, 249, 251, 0.7) 45%,
+        rgba(247, 249, 251, 0.94) 100%
+      ),
+      url("../img/contact-bg-robot.jpg?v=1") center top / min(100vw, 520px) auto no-repeat;
   }
   .panel-scroll { padding: 2rem 5rem 2rem 1.5rem; }
   .two-col { grid-template-columns: 1fr; }
