@@ -523,37 +523,6 @@ body:has(#panel-home.active) .bg-shape {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-panel {
-  position: relative;
-  isolation: isolate;
-}
-
-.contact-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      120deg,
-      rgba(247, 249, 251, 0.92) 0%,
-      rgba(247, 249, 251, 0.72) 38%,
-      rgba(238, 245, 248, 0.55) 62%,
-      rgba(247, 249, 251, 0.88) 100%
-    ),
-    url("../img/contact-bg-robot.jpg?v=1") right 8% top 12% / min(58vw, 720px) auto no-repeat;
-  opacity: 1;
-}
-
-.contact-panel .page-head,
-.contact-panel .contact-cards {
-  position: relative;
-  z-index: 1;
 }
 
 .contact-cards .card {
@@ -587,16 +556,6 @@ body:has(#panel-home.active) .bg-shape {
     left: 1rem;
     width: 88px;
     height: 88px;
-  }
-  .contact-panel::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(247, 249, 251, 0.88) 0%,
-        rgba(247, 249, 251, 0.7) 45%,
-        rgba(247, 249, 251, 0.94) 100%
-      ),
-      url("../img/contact-bg-robot.jpg?v=1") center top / min(100vw, 520px) auto no-repeat;
   }
   .panel-scroll { padding: 2rem 5rem 2rem 1.5rem; }
   .two-col { grid-template-columns: 1fr; }
