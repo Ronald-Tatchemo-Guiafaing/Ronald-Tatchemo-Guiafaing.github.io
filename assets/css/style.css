@@ -523,6 +523,41 @@ body:has(#panel-home.active) .bg-shape {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-panel {
+  position: relative;
+}
+
+.contact-panel .page-head {
+  position: relative;
+  z-index: 1;
+  padding-left: 7.5rem;
+}
+
+.contact-accent {
+  position: absolute;
+  top: 2.25rem;
+  left: 2.5rem;
+  width: 118px;
+  height: 118px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 12px 28px rgba(28, 36, 48, 0.12),
+    0 0 0 8px rgba(74, 155, 184, 0.12);
+  opacity: 0.92;
+  display: block;
 }
 
 .contact-cards .card {
@@ -556,6 +591,13 @@ body:has(#panel-home.active) .bg-shape {
     left: 1rem;
     width: 88px;
     height: 88px;
+  }
+  .contact-panel .page-head { padding-left: 0; padding-top: 7rem; }
+  .contact-accent {
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 96px;
+    height: 96px;
   }
   .panel-scroll { padding: 2rem 5rem 2rem 1.5rem; }
   .two-col { grid-template-columns: 1fr; }
