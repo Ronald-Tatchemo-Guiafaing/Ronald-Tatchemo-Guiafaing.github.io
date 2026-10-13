@@ -1,15 +1,15 @@
 # Portfolio | Ronald Tatchemo Guiafaing
 
-Research portfolio (IMESS, Grenoble INP Esisar).
+**Not a template. Not free to reuse.**
+
+Personal research portfolio (IMESS, Grenoble INP Esisar).
 
 **Live:** https://ronald-tatchemo-guiafaing.github.io/
 
-## Local preview
+See `LICENSE` — **All Rights Reserved**. Do not copy, fork-for-reuse, or adapt this design/code without written permission.
+
+## Local preview (owner only)
 
 ```bash
 python -m http.server 8080
 ```
-
-## Deploy
-
-Push to `main` on `Ronald-Tatchemo-Guiafaing.github.io`.
